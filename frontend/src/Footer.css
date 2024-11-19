@@ -22,7 +22,7 @@ body {
   background-color: #002d62;
   color: white;
   padding: 10px; /* Reduced padding */
-  position: sticky; /* Fixed at the bottom of the page */
+  position: fixed; /* Fixed at the bottom of the page */
   bottom: 0; /* Always at the bottom */
   left: 0;
   right: 0;

@@ -82,7 +82,7 @@ router.post('/forgot-password', async (req, res) => {
       await user.save();
 
       // Send the reset link via email
-      const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+      const resetUrl = `http://54.211.228.203:3000/reset-password/${resetToken}`;
       const message = `You are receiving this email because you (or someone else) requested a password reset. Click the link to reset your password: \n\n ${resetUrl}`;
       
       await transporter.sendMail({
