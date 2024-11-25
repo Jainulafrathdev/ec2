@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
   margin: 0;
   padding: 0;
@@ -5,14 +6,14 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-
-
-.stock-portfolio,.stock-watchlist {
+/* Portfolio and Watchlist */
+.stock-portfolio, .stock-watchlist {
   color: white;
   font-size: 1.5rem;
 }
 
-.portfolio-topics,.watchlist-topics {
+/* Portfolio and Watchlist Header Styles */
+.portfolio-topics, .watchlist-topics {
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -20,13 +21,12 @@ body {
   margin-left: 50px;
 }
 
-.portfolio-headings,.watchlist-headings {
+.portfolio-headings, .watchlist-headings {
   color: white;
   font-size: 1rem;
 }
 
-.portfolio-headings:hover,
-.watchlist-headings:hover {
+.portfolio-headings:hover, .watchlist-headings:hover {
   color: gold;
   cursor: pointer;
 }
@@ -42,42 +42,122 @@ body {
   cursor: pointer;
 }
 
+/* Portfolio and Watchlist Container */
 .portfolio-container, .watchlist-container {
   padding: 20px;
   text-align: center;
   align-items: center;
   background-color: #f9f9f9;
   width: 100%;
+  box-sizing: border-box; /* Ensure containers don't overflow */
+  overflow-x: auto; /* Allow horizontal scrolling if content overflows */
 }
 
-.portfolio-table,
-.watchlist-table {
+/* Portfolio and Watchlist Tables */
+.portfolio-table, .watchlist-table {
   width: 80%;
   border-collapse: collapse;
-  margin: 20px auto; /* Center the table */
+  margin: 20px auto;
   border: 1px solid #ddd;
+  box-sizing: border-box;
 }
 
-.portfolio-table-header,
-.watchlist-header {
+.portfolio-table-header, .watchlist-header {
   background-color: #f4f4f4;
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
-.portfolio-stock-symbol,
-.watchlist-symbol,
-.portfolio-stock-price,
-.watchlist-price,
-.portfolio-stock-change,
-.watchlist-change,
-.portfolio-stock-changepercent,
-.watchlist-change-percent,
-.portfolio-stock-lastupdated,
-.watchlist-last-updated {
+.portfolio-stock-symbol, .watchlist-symbol,
+.portfolio-stock-price, .watchlist-price,
+.portfolio-stock-change, .watchlist-change,
+.portfolio-stock-changepercent, .watchlist-change-percent,
+.portfolio-stock-lastupdated, .watchlist-last-updated {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: center; /* Center text in table cells */
+  text-align: center;
 }
 
+/* Mobile Specific Adjustments */
+@media (max-width: 1024px) {
+  /* Adjust table width to be more responsive on medium screens */
+  .portfolio-table, .watchlist-table {
+    width: 95%; /* Make the tables responsive */
+  }
+
+  .portfolio-headings, .watchlist-headings {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-stock-symbol, .watchlist-symbol,
+  .portfolio-stock-price, .watchlist-price,
+  .portfolio-stock-change, .watchlist-change,
+  .portfolio-stock-changepercent, .watchlist-change-percent,
+  .portfolio-stock-lastupdated, .watchlist-last-updated {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .icon, .portfolio-headings, .watchlist-headings {
+    font-size: 1rem;
+  }
+
+  /* Action buttons and icons: Full-width on mobile */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Ensure the container takes full width */
+  }
+
+  .action-buttons button {
+    width: 100%; /* Make buttons full width */
+    padding: 12px 0;
+    font-size: 1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+
+  .action-buttons button:hover {
+    background-color: #00A86B;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Further adjustments for smaller mobile screens */
+  .portfolio-table, .watchlist-table {
+    width: 100%;
+  }
+
+  .portfolio-headings, .watchlist-headings {
+    font-size: 0.8rem;
+  }
+
+  .portfolio-stock-symbol, .watchlist-symbol,
+  .portfolio-stock-price, .watchlist-price,
+  .portfolio-stock-change, .watchlist-change,
+  .portfolio-stock-changepercent, .watchlist-change-percent,
+  .portfolio-stock-lastupdated, .watchlist-last-updated {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* Action buttons: Adjust to full width for smaller devices */
+  .action-buttons button {
+    padding: 14px 0;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 485px) {
+  /* For very small screens, fine-tune buttons */
+  .action-buttons button {
+    padding: 16px 0;
+    font-size: 1.2rem;
+  }
+}

@@ -175,7 +175,7 @@ const [watchlist, setWatchlist] = useState([]);
     setError(null);
     try {
       
-      const API_KEY = '6715bfb20a2446.06319934';
+      const API_KEY = '67441b5c13a6c0.33616598';
       const response = await axios.get(
         `https://eodhistoricaldata.com/api/real-time/${symbol}.NSE?api_token=${API_KEY}&fmt=json`
       );
