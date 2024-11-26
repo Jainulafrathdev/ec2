@@ -21,7 +21,7 @@ body {
   align-items: center; /* Align items vertically at the center */
   background-color: #002d62;
   color: white;
-  padding: 10px; /* Reduced padding */
+   padding: 2px;/* Reduced padding */
   position: fixed; /* Fixed at the bottom of the page */
   bottom: 0; /* Always at the bottom */
   left: 0;
@@ -118,7 +118,7 @@ body {
 }
 
 /* Media Query for Small Screens */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -128,45 +128,6 @@ body {
   .footer-center,
   .footer-right {
     align-items: center; /* Center content on smaller screens */
-  /*  margin-bottom: 10px; *//* Add margin between footer sections */
- /* }
-} */
-
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 5px; /* Smaller padding for mobile */
-    flex-direction: column; /* Stack sections vertically */
-    text-align: center; /* Center-align text */
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    margin-bottom: 5px; /* Less space between sections */
-  }
-
-  .footer-right {
-    margin-right: 0; /* Remove right margin on smaller screens */
-  }
-
-  .newsletter input[type="email"],
-  .newsletter button {
-    width: 100%; /* Make input and button full-width */
-    margin-bottom: 5px; /* Space between input and button */
-  }
-}
-@media (max-width: 768px) {
-  .footer {
-    font-size: 14px; /* Adjust font size for mobile view */
-  }
-
-  .footer ul li {
-    margin-bottom: 3px; /* Reduce spacing between list items */
-  }
-}
-@media (max-width: 768px) {
-  .footer {
-    position: static; /* Remove fixed position for mobile */
+    margin-bottom: 10px; /* Add margin between footer sections */
   }
 }

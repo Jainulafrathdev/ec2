@@ -16,9 +16,14 @@ const Header = () => {
 
   // Fetch user data on component mount
   useEffect(() => {
+    const email = localStorage.getItem('userEmail');
+    console.log("User Email in Header:", email); 
     if (email) {
       const fetchData = async () => {
         const userData = await getUserData(email);
+        console.log("Fetched User Data:", userData);  // Log the user data
+        console.log("Profile Picture URL:", user.profilePicture);  // Add this line to log the profile picture
+
         setUser(userData);
       };
       fetchData();
