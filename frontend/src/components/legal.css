@@ -2,7 +2,9 @@
 
 .legal-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 100px;
   align-items: center;
   min-height: 100vh; /* Full viewport height */
   padding: 20px; /* Padding for responsiveness */

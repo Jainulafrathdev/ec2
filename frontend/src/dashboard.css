@@ -169,13 +169,22 @@
   margin-top: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  vertical-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.portfolio-dropdown:hover{
+  background-color: #c5c5c5;
+  border-radius: 5px;
+}
+.portfolio-dropdown i{
+  padding-top: 6px;
 }
 
 .logout-section{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   border: none;
   border-radius: 5px;
 
@@ -195,7 +204,7 @@
   color: black;
   border: none;
   padding-left: 15px;
-  padding-top: 3px;
+  padding-top: 10px;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -326,6 +335,15 @@
   border: 1px solid #ddd;
   text-align: center; /* Center text in table cells */
 }
+.stock-symbol:hover,
+.stock-price:hover,
+.stock-change:hover,
+.stock-change-percent:hover,
+.last-updated:hover{
+  cursor: pointer;
+  background-color: #ccc;
+}
+
 
 
 .sidebar {

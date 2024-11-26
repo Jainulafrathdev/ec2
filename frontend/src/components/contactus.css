@@ -11,7 +11,11 @@ body, html {
   display: flex;
   min-height: 100vh;
 }
-
+.back-btn-section{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
 .left-section {
   flex: 1;
   background-color: #1c1c1c;
@@ -95,14 +99,15 @@ form {
   gap: 20px;
 }
 
-.name-fields .contact-details  {
+/* .name-fields .contact-details  {
   display: flex;
-  gap: 15px;
-}
+  
+} */
 
 input, textarea {
   width: 91%;
   padding: 12px;
+  margin-bottom: 10px;
   border: 1px solid #ddd;
   font-size: 0.8rem;
   border-radius: 4px;
@@ -114,6 +119,7 @@ textarea {
 }
 
 button {
+width: 95%;
   padding: 12px;
   background-color: black;
   color: white;

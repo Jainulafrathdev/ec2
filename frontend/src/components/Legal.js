@@ -1,11 +1,19 @@
 // legal.js
 import React from 'react';
 import './legal.css';
+import back from '../images/ShariaStocks-logo/back.svg'
+import { useNavigate } from 'react-router-dom';
 
 const LegalInformation = () => {
+  const navigate = useNavigate();
   return (
     <div className="legal-container">
       <div className="legal-background" /> {/* Background image and overlay */}
+      <div className='back-btn-section'>
+            <img className='back-btn' src={back} alt="Go back" onClick={() => {
+                 navigate(-1)
+             }}/>
+          </div>
       <div className="legal-info">
         <h1 className="legal-title">Legal Information</h1>
         <p className="legal-description">

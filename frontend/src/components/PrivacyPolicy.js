@@ -1,10 +1,18 @@
 // privacypolicy.js
 import React from 'react';
 import './privacypolicy.css';
+import back from '../images/ShariaStocks-logo/back.svg'
+import { useNavigate } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
   return (
     <div className="privacy-container">
+      <div className='back-btn-section'>
+            <img className='back-btn' src={back} alt="Go back" onClick={() => {
+                 navigate(-1)
+             }}/>
+          </div>
       <div className="privacy-background" /> {/* Background image and overlay */}
       <div className="privacy-content">
         <h1 className="privacy-title">Privacy Policy</h1>

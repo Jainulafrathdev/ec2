@@ -46,6 +46,12 @@ const EditProfile = () => {
 
     const validateField = (name, value) => {
         switch (name) {
+            case 'name':
+                if (!/^[A-Za-z\s]+$/.test(value)) return 'Name must only contain letters and spaces.';
+                if (value.length > 15) return 'Name must not exceed 15 characters.';
+                return '';
+            case 'contactNumber':
+                return /^\d+$/.test(value) ? '' : 'Contact number must only contain digits.';
             case 'doorNumber':
                 return value.length < 1 ? 'Door number is required' : '';
             case 'streetName':
@@ -180,12 +186,14 @@ const EditProfile = () => {
                         <div className="form-fields">
                             <label>Name</label>
                             <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                            {errors.name && <p className="error">{errors.name}</p>}
                             
                             <label>Email</label>
                             <input type="email" name="email" value={user.email} disabled />
                             
                             <label>Contact Number</label>
                             <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} />
+                            {errors.contactNumber && <p className="error">{errors.contactNumber}</p>}
                             
                             <label>Door Number</label>
                             <input type="text" name="doorNumber" value={formData.doorNumber} onChange={handleChange} />
